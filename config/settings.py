@@ -29,7 +29,8 @@ INSTALLED_APPS = [
 
     # Дополнения
     'rest_framework',
-
+    'coreapi',  # Coreapi for coreapi documentation
+    'drf_yasg',  # drf_yasg fro Swagger documentation
 ]
 
 MIDDLEWARE = [
@@ -117,6 +118,8 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ]
 }
+REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
